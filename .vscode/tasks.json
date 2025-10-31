@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open Shell Here",
+      "type": "shell",
+      "command": "/bin/zsh",
+      "args": ["-l"],
+      "presentation": { "panel": "shared" },
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Run Pytests",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/pytest",
+      "args": ["-q"],
+      "presentation": { "panel": "shared" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Uvicorn",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/uvicorn",
+      "args": ["main:app", "--reload"],
+      "presentation": { "panel": "shared" },
+      "problemMatcher": []
+    }
+  ]
+}
